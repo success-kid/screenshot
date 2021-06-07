@@ -10,11 +10,10 @@ let SSAPI = process.env.SSAPI; //putting the screenshot API call into a shorter 
 
 // read csv
 const data = fs.readFileSync("data/websites.csv", "utf8"); //read the file
-console.log(data);
 const records = parse(data.trim(), { columns: true, skipEmptyLines: true }); //parse the file
+
 var errors = [];
 
-console.log(data);
 
 async function getScreenshots() {
   // use api
